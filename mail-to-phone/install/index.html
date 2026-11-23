@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>מייל לפלאפון — התקנה אישית</title>
+  <style>
+    :root{color-scheme:light;--ink:#243746;--muted:#50646d;--accent:#005b65;--accent-hover:#003e45;--surface:#f8faf9;--line:#d6e0df;--soft:#e5eeeb;--error:#922d35}
+    *{box-sizing:border-box}body{margin:0;background:var(--surface);color:var(--ink);font:17px/1.75 Arial,sans-serif;min-height:100vh}
+    a{color:var(--accent);text-underline-offset:.2em}a:hover{color:var(--accent-hover)}
+    header,main,footer{max-width:1040px;margin-inline:auto;padding-inline:32px}header{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:96px;border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;text-decoration:none;color:var(--ink)}.brand svg{color:var(--accent);width:28px;height:28px}
+    header>a:last-child{font-size:.9rem}main{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(230px,1fr);gap:72px;padding-block:72px 88px}
+    h1{font-size:clamp(2rem,5vw,3rem);line-height:1.2;letter-spacing:-.025em;margin:0 0 24px;text-wrap:balance}h2{font-size:1.18rem;line-height:1.45;margin:0 0 12px}
+    p{margin:0 0 20px;max-width:65ch}.intro{font-size:1.14rem;color:var(--muted)}
+    .setup{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;margin-top:32px}.setup p{font-size:.95rem;color:var(--muted)}
+    button,.primary{font:700 1rem/1.5 Arial,sans-serif;border:0;border-radius:7px;background:var(--accent);color:#fff;cursor:pointer;padding:13px 22px;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;min-height:48px}
+    button:hover,.primary:hover{background:var(--accent-hover);color:#fff}button:disabled{cursor:wait;background:#466f72}.primary[hidden]{display:none}button[hidden]{display:none}
+    button.secondary{background:transparent;color:var(--accent);border:1px solid var(--line);margin-inline-start:10px}button.secondary:hover{background:var(--soft)}
+    :focus-visible{outline:3px solid #147d87;outline-offset:4px}::selection{background:#bfdcd8;color:#142f32}
+    .notice{display:flex;align-items:flex-start;gap:10px;margin-block:20px 0;color:var(--muted);font-size:.9rem}.notice svg{width:21px;min-width:21px;margin-top:5px;color:var(--accent)}
+    .progress{padding:0;margin:32px 0 0;list-style:none}.progress li{display:flex;gap:14px;align-items:start;padding-block:15px;border-bottom:1px solid var(--line);color:var(--muted)}
+    .progress span:first-child{display:inline-grid;place-items:center;border:1px solid #71898c;min-width:28px;height:28px;font-size:.85rem;border-radius:50%;font-variant-numeric:tabular-nums}
+    .progress strong{font-weight:400}.progress li.current{color:var(--ink)}.progress li.current span:first-child{background:var(--accent);border-color:var(--accent);color:#fff}
+    aside{padding-top:8px}aside p{color:var(--muted);font-size:.94rem}aside section+section{margin-top:32px}footer{border-top:1px solid var(--line);padding-block:24px;display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+    #status{margin-block:0 20px;white-space:pre-line}#error{color:var(--error);margin-top:16px}#error:empty{display:none}#error p{color:inherit}
+    form[hidden]{display:none}form{margin-top:24px}label{display:block;font-size:.92rem;margin-block:16px 6px}input{width:100%;font:inherit;background:#fff;color:var(--ink);border:1px solid #71898c;border-radius:6px;padding:10px 12px;caret-color:var(--accent)}input[type=radio]{width:auto;accent-color:var(--accent);margin-inline:0 7px}fieldset{border:0;padding:0;margin-block:24px}legend{font-weight:700}fieldset label{display:flex;align-items:baseline;gap:4px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fields label{margin-top:8px}
+    @media(max-width:740px){main{grid-template-columns:1fr;gap:40px;padding-block:36px 48px}header,main,footer{padding-inline:22px}header{min-height:80px}aside{padding-top:0}.setup{padding:22px}button{width:100%}button.secondary{margin:12px 0 0}}
+    @media(max-width:380px){header>a:last-child{max-width:11ch;font-size:.8rem}.brand{gap:8px;font-size:.95rem}}
+    @media(prefers-reduced-motion:no-preference){.setup{animation:appear .4s cubic-bezier(.16,1,.3,1)}@keyframes appear{from{clip-path:inset(0 0 10% 0);filter:blur(1px)}to{clip-path:inset(0);filter:blur(0)}}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="https://talmidhon.github.io/mail-to-phone/">
+      <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="6" width="16" height="13" rx="2"/><path d="m4 7 7 6 7-6"/><rect x="18" y="11" width="7" height="13" rx="1.6"/><path d="M20.5 21h2"/></svg>
+      <span>מייל לפלאפון</span>
+    </a>
+    <a href="https://talmidhon.github.io/mail-to-phone/privacy/">פרטיות והרשאות</a>
+  </header>
+  <main>
+    <article>
+      <h1>המייל שלך.<br>גם בפלאפון שלך.</h1>
+      <p class="intro">מחברים את חשבון Google למערכת ימות המשיח שלך. לכל חשבון נוצר עותק אישי, שבו יפעל השירות.</p>
+      <div class="setup" aria-labelledby="setup-title">
+        <h2 id="setup-title">התקנה אישית</h2>
+        <p id="status" role="status" aria-live="polite">בודקים את זמינות ההתקנה…</p>
+        <button id="start" type="button" hidden>התחברות ויצירת עותק אישי</button>
+        <a id="continue" class="primary" hidden target="_top" rel="noopener">להמשך ההתקנה</a>
+        <button id="refresh" class="secondary" type="button" hidden>בדיקת מצב</button>
+        <button id="accepted" type="button" hidden>קיבלתי בעלות — המשך</button>
+        <form id="settings" hidden>
+          <label for="account">מספר מערכת בימות המשיח</label>
+          <input id="account" name="account" inputmode="numeric" dir="ltr" required pattern="[0-9]{5,20}" autocomplete="off">
+          <label for="api-key">מפתח API של המערכת</label>
+          <input id="api-key" name="apiKey" type="password" dir="ltr" required autocomplete="off" maxlength="4096">
+          <div class="fields"><div><label for="archive">שלוחת המיילים</label><input id="archive" name="archive" value="1" required></div><div><label for="ring">שלוחת הצינתוקים</label><input id="ring" name="ring" value="9" required></div></div>
+          <label for="list">רשימת צינתוקים</label><input id="list" name="list" value="123" inputmode="numeric" required pattern="[0-9]{1,20}">
+          <fieldset><legend>מה צריך להכין במערכת הטלפון?</legend>
+            <label><input type="radio" name="mode" value="configure" required>להגדיר את השלוחות לשירות. הפעולה תשנה הגדרות במערכת הטלפון.</label>
+            <label><input type="radio" name="mode" value="existing">השלוחות כבר מוגדרות; רק לחבר ולהפעיל.</label>
+          </fieldset>
+          <p>בחרו הגדרה חדשה רק לאחר שבדקתם את השלוחות. הגדרות קיימות יגובו לפני שינוי; אין כאן אישור למחיקת קבצים.</p>
+          <button id="activate" type="submit">שמירה והפעלת השירות</button>
+        </form>
+        <div id="error" role="alert"></div>
+      </div>
+      <ol class="progress" aria-label="שלבי ההתקנה">
+        <li id="step-1" class="current"><span aria-hidden="true">1</span><strong>מתחברים לחשבון Google</strong></li>
+        <li id="step-2"><span aria-hidden="true">2</span><strong>מקבלים עותק אישי בבעלותכם</strong></li>
+        <li id="step-3"><span aria-hidden="true">3</span><strong>מגדירים את מערכת הטלפון ומפעילים</strong></li>
+      </ol>
+    </article>
+    <aside>
+      <section><h2>מה כדאי להכין?</h2><p>חשבון Google ומספר מערכת בימות המשיח. מפתח החיבור למערכת הטלפון יידרש בשלב ההגדרות.</p></section>
+      <section><h2>העותק נשאר אישי</h2><p>הסריקה מיועדת לפעול בסקריפט שבבעלותכם. במהלך ההתקנה המתקין פועל בהרשאות שתאשרו. הצלחת ניסוי אינה הבטחה שההפצה כבר מוכנה.</p></section>
+      <div class="notice"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m12 3 8 3v5c0 5-4 8-8 10-4-2-8-5-8-10V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span>לעולם אל תשלחו מפתח חיבור או סיסמה בצ׳אט. הזינו פרטים רק במסך ההגדרות המיועד.</span></div>
+    </aside>
+  </main>
+  <footer><span>מייל לפלאפון</span><a href="mailto:mailtophone.service@gmail.com">עזרה והתקשרות</a><span>סביבת התקנה ניסיונית</span></footer>
+  <script>
+    (() => {
+      'use strict';
+      const text = {
+        unavailable: 'מסלול ההתקנה החדש עדיין בבדיקה. אין צורך להזין כאן פרטים כרגע.',
+        ready: 'ניסוי התקנה: אפשר ליצור בקשת בדיקה. סריקת מיילים וחיבור למערכת הטלפון אינם מופעלים בניסוי הזה.',
+        queued: 'הבקשה נשמרה וממתינה להכנת העותק האישי. אפשר לבדוק את המצב שוב בעוד רגע.',
+        preparing: 'העותק האישי בהכנה. אין צורך לבצע פעולה כרגע.',
+        awaiting_customer: 'העותק מוכן למסירה. פתחו אותו ואשרו את קבלת הבעלות בחשבון Google שממנו התחברתם.',
+        handoff_requested: 'בודקים את קבלת הבעלות ומכינים את החיבור הפרטי.',
+        handing_off: 'משלימים את החיבור הפרטי ומסירים את גישת המפיץ.',
+        awaiting_settings: 'העותק בבעלותכם והחיבור הפרטי מוכן. השלימו את הגדרות מערכת הטלפון להפעלה.',
+        configuring: 'שומרים את ההגדרות ומפעילים את השירות. המתינו לסיום הפעולה.',
+        quarantined: 'ההכנה נעצרה לבדיקת תקלה. הבקשה נשמרה; אין צורך ליצור בקשה נוספת.',
+        cancelled: 'בקשת ההתקנה בוטלה.', complete: 'ההתקנה הושלמה. אפשר לפתוח את העותק האישי.',
+        failed: 'הפעולה לא הושלמה. בדקו את החיבור ונסו שוב.', starting: 'שומרים את בקשת ההתקנה…'
+      };
+      const status = document.getElementById('status');
+      const error = document.getElementById('error');
+      const start = document.getElementById('start');
+      const refresh = document.getElementById('refresh');
+      const next = document.getElementById('continue');
+      const accepted = document.getElementById('accepted');
+      const settings = document.getElementById('settings');
+      const activate = document.getElementById('activate');
+      const embedded = Boolean(window.google && google.script && google.script.run);
+      let jobId = null;
+      function call(name, args, success) {
+        error.textContent = ''; start.disabled = true; refresh.disabled = true;
+        accepted.disabled = true; activate.disabled = true;
+        const runner = google.script.run.withSuccessHandler(result => {
+          start.disabled = false; refresh.disabled = false; accepted.disabled = false;
+          activate.disabled = false; success(result);
+        }).withFailureHandler(() => {
+          start.disabled = false; refresh.disabled = false; accepted.disabled = false;
+          activate.disabled = false; error.textContent = text.failed;
+        });
+        runner[name](...args);
+      }
+      function render(job) {
+        jobId = job.id; start.hidden = true; refresh.hidden = false;
+        status.textContent = text[job.state] || text.failed;
+        accepted.hidden = job.state !== 'awaiting_customer';
+        settings.hidden = !['awaiting_settings', 'configuring'].includes(job.state);
+        if (job.state === 'complete') { document.getElementById('api-key').value = ''; settings.reset(); }
+        next.hidden = true; next.removeAttribute('href');
+        if (job.spreadsheetUrl && /^https:\/\/docs\.google\.com\/spreadsheets\/d\/[\w-]+\/edit$/.test(job.spreadsheetUrl)) {
+          next.href = job.spreadsheetUrl; next.hidden = false;
+        }
+        document.querySelectorAll('.progress li').forEach((item, index) => {
+          item.classList.toggle('current', index === (job.state === 'complete' ? 2 : 1));
+        });
+      }
+      start.addEventListener('click', () => {
+        status.textContent = text.starting; call('startInstallation', [], render);
+      });
+      refresh.addEventListener('click', () => { if (jobId) call('installationStatus', [jobId], render); });
+      accepted.addEventListener('click', () => { if (jobId) call('requestHandoff', [jobId], render); });
+      settings.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!jobId || !settings.reportValidity()) return;
+        const input = Object.fromEntries(new FormData(settings));
+        call('configurePersonalInstallation', [jobId, input], render);
+      });
+      if (embedded) {
+        call('installationAvailability', [], result => {
+          status.textContent = result.accepting ? text.ready : text.unavailable;
+          start.hidden = !result.accepting;
+          if (result.accepting) call('currentInstallation', [], job => { if (job) render(job); });
+        });
+      } else {
+        status.textContent = text.unavailable;
+      }
+    })();
+  </script>
+</body>
+</html>
